@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPEG-4</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</head>
+<body style="background-color: #ACCBDD; font-family: 'Open Sans', sans-serif; font-size: 2em">
+    
+
+
+    <!-- //navbar -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">MPEG-4 file container</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="#motiv">Motivation</a></li>
+            <li><a href="#about">About MPEG-4</a></li>
+            <li><a href="#how">How it works? </a></li>
+            <li><a href="#cmpI">Compression of I frame</a></li>
+            <li><a href="#cmpBP">Compression of B-P frames</a></li>
+            <li><a href="#decoder" class="nav-item nav-link">Decoder</a></li>
+            <li><a href="./team.html" class="nav-item nav-link">Team</a></li>
+          </ul>
+        </div>
+      </nav>
+ 
+      
+    
+        <!-- cards -->
+        <div >
+            <div class="row">
+                <div class="col-lg-12 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="" alt="">
+      
+                        <div class="card-body" style="background-color: #098bd6; border: black;  margin-top: 5%;" >
+                            <p class="card-text" style= "text-align: center; font-size : 2em;   padding-top: 1%;">
+                                the only way to learn mathematics is to do mathematics. <br>
+                            </p>
+                            <h5 class="card-title" style=" font-size : 1.3em; color : #f7f2ad;  padding-left: 72.7%; padding-bottom: 1%; " >- Paul Halmos</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="motiv">
+            <h2 style="text-align: center; background :#ada426; margin-left :  9.4%; margin-right : 9.4%; margin-bottom : 5px; border-radius : 5px; padding : 8px; padding-top : 6px">Motivation</h2>
+        
+
+        <div class="container">
+            <p>The video taken by camera <I>RawVideo</I> can be around 60GB per hour and it is very hard to manage and very tough to transfer it requires very high bandwidth to transmit and to process it also require very high processing power. to resolve this we compress the video files with the help of codecs the audio file and all other required contents to a container. MPEG-4 is the widely used container and it supports most of the audio video formats.</p>
+        </div>
+    </div>
+
+    <div id="about">
+
+        <h2 style="text-align: center; background :#ada426; margin-left :  9.4%; margin-right : 9.4%; margin-bottom : 5px; border-radius : 5px; padding : 8px; padding-top : 6px">About MPEG-4</h2>
+        <div class="container" >
+            
+            <p>MPEG-4 stands for moving picture expert group-4. MPEG-4 is one type container. It provide good video quality at lower bit. It includes both audio and video data and supports multiple A/V codecs. Mostly it used for transmit video content over the web and for streaming videos on the internet in large scale of amount.</p>
+        </div>
+    </div>
+
+    <div id="how">
+
+        <h2 style="text-align: center; background :#ada426; margin-left :  9.4%; margin-right : 9.4%; margin-bottom : 5px; border-radius : 5px; padding : 8px; padding-top : 6px">
+        How it works</h2>
+        <div class="container">
+            <h3 style="padding:0.7% 0; text-align: center; background : #0f214d; margin-left :  35%; margin-right : 35%; margin-bottom : 1%; border-radius : 30px;">Differntiating I-B-P frames</h3>
+
+            <p style="padding: auto 15% ;">In a video there is a term called frame rate which is number of frames per second example for in 60 frames per second video there are 60 different frames going in a second so there is possibility that there are two frames
+                which are same so this makes no sense to save both frames.so we use some compression methods to overcome this.one of the most famous method is I-B-P frame differentiation and then compression of respective frame using compression algorithms.The I-frames are “key-frames”, which have no reference to other frames and their compression is not that much.A P‑frame (Predicted picture) holds only the changes in the image from the previous frame.The B‑frame (Bidirectional predicted picture) saves even more space by using differences between the current frame and both the preceding and following frames to specify its content. P and B frames are also called Inter frames. The order in which the I, P and B frames are arranged is called the Group of pictures.in normal scenario in the classification of I-B-P frames is <b> IBBPBBPBBPBBIBBPBB...</b>the compression ratio is 1:27 in this frame distribution.</p>
+
+            <img src="./roadmap.jpeg" alt="roadmap of encoding in MPEG-4">
+        </div>
+    </div>
+
+    <div id="cmpI">
+        <h2 style="text-align: center; background :#ada426; margin-left :  9.4%; margin-right : 9.4%; margin-bottom : 5px; border-radius : 5px; padding : 8px; padding-top : 6px">Compression of I frames</h2>
+        
+        <div class="container">
+            <h3 style="padding:0.7% 0; text-align: center; background : #0f214d; margin-left :  35%; margin-right : 35%; margin-bottom : 1%; border-radius : 30px;">1. Color-space converter</h3>
+            <p>If in a certain case the colour channel is RGB (Red, Green, Blue) then after passing it through a colour space converter it gets converted to another colour channel e.g. - YCbCr for better image representation/vision and it would be easier to solve further tasks using the new colour chan- nel. Similarly, any colour channel gets converted to another with the
+                help of this converter.</p>
+        </div>
+    </div>
+    
+        
+        <div class="container">
+            <h3 style="background-color: #0f214d;
+            padding : 0.7% 0; 
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px 43%">2. FDCT</h3>
+            <p>
+                In DCT transformation, we get the input as the matrix of NxN where N is the pixels of the image.
+                The output of the DCT transformation is also a matrix of NxN de- noted by V which is given by<br> <big> <b>V = C U C<sup>T</sup></b></big><br>where U is the matrix of the input image whose order is given by its pixel<br><br>V is the output of the DCT<br>
+                <img src="./Screenshot 2022-07-07 at 10.52.08 PM.png" alt=""> ,   0≤ k ≤ N−1;<br><br>
+                C matrix is given by the following formula:-<br>
+                <img src="./Screenshot 2022-07-07 at 10.57.34 PM.png" alt=""> <br>
+                Once, we get a matrix c we have to multiply it by our image matrix which was passed on as out input to DCT, U and would get an inter- mediate which we have to multiply by the transpose of C to get our fi- nal DCT matrix.
+            ​</p>
+        </div>
+
+        <div class="container">
+            <h3 style="background-color: #0f214d;
+            padding : 0.7% 0; 
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px 38%">3. Quantiozation</h3>
+            <p>It involves lossy compression technique achieved by compressing a range value to a single quantum value. (Simply it converts the continuous signal to discrete signals)
+                In this process, there is a pre-defined quantisation matrix for each color channel.</p>
+                <h4>Process:-                </h4>
+                Divides the output (8 × 8matrix) by quantisation matrix for appropri- ate color channel.Then it round it up. It contains maximum number of zeros.<br><br>
+                DCT coefficient matrix:<br>
+                <img src="./Screenshot 2022-07-07 at 11.00.40 PM.png" alt="" style="width : 40%; height: 40%;"><br><br>
+                A common quantization matrix:-<br>
+                <img src="./Screenshot 2022-07-07 at 11.36.16 PM.png" alt="" style="width : 40%; height: 40%;"><br><br>
+                Divide and rounding to integer value:-<br>
+                <img src="./Screenshot 2022-07-07 at 11.37.29 PM.png" alt="" style="width : 40%; height: 40%;"><br><br>
+                As example first element,<br>
+round(-415/16) = round(-25.93) = -26<br>
+Similarly we can do that for other element.
+        </div>
+
+        <div class="container">
+            <h3 style="background-color: #0f214d;
+            padding : 0.7% 0; 
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px 38%">4. Zig-Zag Scan</h3>
+            <p>
+                After getting 8×8 matrix from quantization, to pass this matrix to en- tropy encoding stage, we’ve to convert it into a 1D array. will give 1D array of integers.The largest term in the section is known as DC coeffi- cient while all other terms are known as AC coefficients.
+                </p>
+                <img src="./Screenshot 2022-07-07 at 11.41.49 PM.png" alt="">
+        </div>
+
+        <div class="container" >
+            <h3 style="background-color: #0f214d;
+            padding : 0.7% 0; 
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px 37%">4. Entropy encoder</h3>
+            <p>It is a type of lossless coding to compile data type. <br>
+                This technique involves replacing data elements with coded represent- ation of data elements which is passed on as an input to entropy de- coder block.<br><br>
+                There are two types of entropy encoding:<br>
+                1) Huffmann encoding<br> 2) Arithmetic encoding<br><br>
+                Arithmetic encoding is better than Huffmann encoding as its compres- sion ratio is larger than Huffmann encoding.<br><br>
+                
+            </p>
+
+            <div class="hoffman">
+                <h4 style="color: #403a03dd ;"><big>4.1 Hoffman Encoding</big></h4>
+                <p>It is a method of compression of data which compresses the data which much efficient loss of any data.
+                    <br><br><big>Encoded Hufmann tree</big><br>
+                    Code word for ‘COMMITTEE’ becomes 00100011010000011110101 Size=23 bits Hence, size is reduced(23 is less than 27)<br>
+                    Efficiency computation:<br>
+                    η = H(s) Lavg<br>
+                    H(s) =-􏰂N−1 Pi log2 Pi i=0<br>
+                    =(2 log 2)+3(1 log 1) 929929<br>
+                    Lavg = 􏰂Nk=1 PkIk<br>
+                    =2×29 +2×29 +2×29 +3×19 +4×19 +4×19 = 2.55<br>
+                    η = 2.503 2.55<br>
+                    = 97.97% efficiency<br><br>
+
+                </p>
+            </div>
+
+            <div class="arithmatic">
+                <h4 style="color: #403a03dd ;"><big>4.2 Arithmatic Encoding</big></h4>
+                <p>Consider the input string abcad and their respective probabilities are P(a)=0.2,P(b)=0.3,P(c)=0.1,P(d)=0.4 encode using AE.<br><br>
+                    <img src="./Screenshot 2022-07-08 at 3.03.22 PM.png" alt="" style="width : 40%; height: 40%;"><br><br>
+                    
+                    Difference(d) = upper limit - lower limit<br>
+                    Range:- lower limit + d * (Probability of particular symbol)</p>
+            </div>
+        </div>
+        
+        <div id="cmpBP">
+        <h2 style="text-align: center; background :#ada426; margin-left :  9.4%; margin-right : 9.4%; margin-bottom : 5px; border-radius : 5px; padding : 8px; padding-top : 6px">Compression of B-P frames</h2>
+
+        <div class="container">
+            <h3 style="background-color: #0f214d;
+            padding : 0.7% 0; 
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px 37%">1. Color-space converter</h3>
+            <p>
+                The process of colur space converter is same as discussed in Compres- sion Of I-Frame.</p>
+        </div>
+
+        <div class="container">
+            <h3 style="background-color: #0f214d;
+            padding : 0.7% 0; 
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px 43%">2. FDCT</h3>
+            <p>The proccess of FDCT(Forward Discrete Cosine Transform) is same as discussed in Compression of I frame.</p>
+        </div>
+
+        <div class="container">
+            <h3 style="background-color: #0f214d;
+            padding : 0.7% 0; 
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px 37%">3. Motion estimator</h3>
+            <p><br></p>
+
+            <div class="pel">
+
+                <h4 style="color: #403a03dd ;"><big>3.1 Pel recursive algorithm</big></h4>
+                <p>A new pel-recursive motion estimation algorithm for video coding ap- plications is presented. The derivation of the algorithm is based on re- cursive least-squares estimation that minimises the mean-square predic- tion error. A comparison with the modified steepest-descent gradient estimation technique algorithm shows significant improvement in terms of mean-square prediction error performance</p><br>
+            </div>
+
+            <div class="blockmatch">
+
+                <h4 style="color: #403a03dd ;"><big>3.2 Block matching algorithm</big></h4>
+                <p>The Block Matching is a temporal compression technique used in the video encoding. The main purpose of this method is to determine the displacements of each block of pixels between two successive frames. This technique, performed in the step of motion estimation, occupies the majority of the total time of video coding. The aim of this work is to give a comparative study various search algorithms by Block Match- ing.It simply use to reduce the amount of data which is required to store and transmit the video. The motion estimation process is an in- extricable part of the video coding as it removes the temporal redund- ancy between successive frames of video sequences.<br><br>
+                    <b>Algorithm:-</b><br>
+                    The PSNR or Signal to Noise Ratio is given by where MSE is the Mean Square Error calculated by. (H×L) is the frame size, X and X are re- spectively the original frame and the predicted frame. We note that
+                    for color frame, equations and are applied separately on the Red com- ponent (R), green component (G) and blue component (B) of the RGB color space. The global PSNR of the R, G and B components is the PSNR average of these three components.<br>
+PSNR = 10log10(2552MSE)MSE
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <h3 style="background-color: #0f214d;
+            padding : 0.7% 0; 
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px 37%">4. Entropy encoder</h3>
+            <p>P-B frame compression is performed same as we seen in I frame compression.</p>
+        </div>
+    </div>
+
+    <div id="decoder">
+        <h2 style="text-align: center; background :#ada426; margin-left :  9.4%; margin-right : 9.4%; margin-bottom : 5px; border-radius : 5px; padding : 8px; padding-top : 6px">Decoder</h2>
+
+        <div class="container" >
+            <h3 style="background-color: #0f214d;
+           padding : 0.7% 0; 
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px 37%">4. Entropy decoder</h3><br>
+            
+
+            <div class="hoffman">
+                <h4 style="color: #403a03dd ;"><big>4.1 Hoffman decoding</big></h4>
+                <p>
+                    Decode the messege “00010110011011000” for given symbols and probability.<br>
+                    ‘MALAYALAM’ is decoded string.<br>
+                    Properties of Huffmann code:-<br>
+                    It gives unique encoded and decoded code. Its process is instantaneous.<br>
+                    It produces a lossless compression of image.<br><br></p>
+            </div>
+            <div class="arithmatic">
+                <h4 style="color: #403a03dd ;"><big>4.2 Arithmatic decoding</big></h4>
+                <p>Let us decode the encoded messege as we have get in the previous example.<br>
+                    To decode the encoded messege → 0.07096 → messege<br>
+                    We have been given the probabilities<br>
+                    P(a) = 0.2, P(b) = 0.3, P(c) = 0.1, P(d) = 0.4, Input = 0.07096<br>
+
+                    <img src="./Screenshot 2022-07-08 at 3.05.24 PM.png" alt="" style="width:40%"><br><br>
+                    We have to select the interval in which the encoded code lies and zoom in it and further we have to do the same thing till we come very rear (3 places after decimal) to the encoded code.<br>
+We also have to note whose range we have zoomed in to get our de- coded code.<br>
+In this case it is ‘abcad’.<br>
+The method to find the gap between two consecutive range remains the same as we have done in arithmetic encoding.<br><br>
+
+<big style="color: #403a03dd ;"> Advantages:-</big><br>
+
+It follows lossless compression methods in which no data is lost on being compressed.<br>
+It encodes the whole life as a sequence of symbols into a single decimal number.<br>
+It has advantages over Huffmann encoding as its compression ratio is 5-10 % letter than HE.<br>
+It only consists of few arithmetic operations thus its complexity is re- duced AC is better than HC.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <h3 style="background-color: #0f214d;
+            padding : 0.7% 0; 
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px 37%">2. De-zigzag scan</h3>
+            <p>After getting 1×64 matrix from entropy decoder, to pass this matrix to dequantizer, we have to convert it into a 8×8 array.<br>
+                <img src="./Screenshot 2022-07-07 at 11.41.49 PM.png" alt="">
+            </p>
+        </div>
+
+        <div class="container">
+            <h3 style="background-color: #0f214d;
+            padding : 0.7% 0; 
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px 37%">3. Dequantization</h3>
+            <p>The input to the dequantisation block is a vector of 1x64 matrix for a case of 8×8 pixel image and based on the particular colour channel there is a fixed matrix of of N×N, where N is the pixel of the image and we get the output as the product of a particular element of the vector with that of the common dequantiser matrix. This output gets passed on as the input to IDCT.</p>
+
+        </div>
+
+        <div class="container">
+            <h3 style="background-color: #0f214d;
+            padding : 0.7% 0; 
+            text-align: center;
+            border-radius: 30px;
+            margin: 10px 42.5%">4. IDCT</h3>
+            <p>The output of IDCT will be the image itself which is to be displayed and its input would be a N×N matrix which is given as output by the dequantizer.<br><br>
+                Its formula is:<br>
+                <img src="./Screenshot 2022-07-07 at 11.53.23 PM.png" alt=""><br>
+                
+                 U(n) is also given by U = C’ V C which is calculated from the above formula.</p>
+        </div>
+    </div>
+
+    <br>
+    <!-- HTML !-->
+    <div class="btn-group-lg" role="group" aria-label="Basic example" style="margin: auto 43.5%" class="button-27">
+        <button type="button" class="btn btn-primary"><a href="./About_mp4.pdf" target="_blank" style="color: white">Latex</a></button>
+        <button type="button" class="btn btn-primary"><a href="https://youtu.be/BU0kjKhSVzg" target="_blank" style="color: white">Youtube</a></button>
+      </div>
+
+    <div style="margin-bottom: 0">
+        <div class="row">
+            <div class="col-lg-12 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="" alt="">
+  
+                    <div class="card-body" style="background-color: black; border: black;  margin-top: 1.12%; " >
+                        <p class="card-text" style= "text-align: center; font-size : 20px; color : white; padding-top: 2%;">
+                            We would like to thank our course instructor Prof. Manish K Gupta and Prof. Manoj K Raut for helping us in this project. <br><br>
+                        </p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- js of cards -->
+          
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity=
+"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous">
+    </script>
+  
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity=
+"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous">
+    </script>
+  
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity=
+"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous">
+    </script>
+
+</body>
+</html>
